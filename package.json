@@ -7,6 +7,10 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "yarn workspace docs dev",
+    "build": "yarn workspace docs build",
+    "pkgs:run": "lerna run --scope",
+    "pkgs:add": "lerna add --scope",
     "pkgs:changed": "lerna changed",
     "pkgs:diff": "lerna diff",
     "pkgs:list": "lerna ls -l",

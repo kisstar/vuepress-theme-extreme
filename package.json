@@ -1,8 +1,15 @@
 {
-  "name": "webpack-cill",
-  "version": "0.0.1",
-  "description": "Basic configuration of webpack",
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "Kisstar's personal blog",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
+    "pkgs:changed": "lerna changed",
+    "pkgs:diff": "lerna diff",
+    "pkgs:list": "lerna ls -l",
     "commit": "git-cz",
     "lint:md": "markdownlint **/*.md",
     "lint:es": "eslint --cache --ext .js .",
@@ -22,11 +29,12 @@
   },
   "keywords": [
     "webpack",
-    "webpack-cill"
+    "vuepress",
+    "blog"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:kisstar/webpack-cill.git"
+    "url": "git@github.com:kisstar/blog.git"
   },
   "author": "kisstar <dwh.chn@foxmail.com>",
   "devDependencies": {
@@ -40,6 +48,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.3",
+    "lerna": "^3.20.2",
     "lint-staged": "^10.0.8",
     "markdownlint": "^0.19.0",
     "markdownlint-cli": "^0.22.0",

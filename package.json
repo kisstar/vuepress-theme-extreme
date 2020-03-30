@@ -17,6 +17,7 @@
     "commit": "git-cz",
     "lint:md": "markdownlint **/*.md",
     "lint:es": "eslint --cache --ext .js .",
+    "lint:vue": "eslint packages --cache --ext .js,.vue",
     "lint:prettier": "prettier --check \"**/*\" --end-of-line auto",
     "prettier": "prettier -c --write \"**/*\"",
     "release": "standard-version"
@@ -50,8 +51,10 @@
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-vue-libs": "^4.0.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.8",

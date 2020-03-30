@@ -5,6 +5,7 @@ package.json
 .gitignore
 .prettierignore
 .markdownlintignore
+.stylelintignore
 .nvmrc
 .yarnrc
 **/*.svg

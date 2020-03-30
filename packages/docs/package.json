@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "0.0.0",
-  "description": "Blog content",
+  "description": "A blog with vuepress theme",
   "private": true,
   "scripts": {
     "dev": "vuepress dev docs",
@@ -9,13 +9,14 @@
     "lint:md": "markdownlint ./docs/**/*.md"
   },
   "keywords": [
-    "webpack",
+    "theme",
     "vuepress",
-    "blog"
+    "blog",
+    "vuepress-theme-extreme"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:kisstar/blog.git"
+    "url": "git@github.com:kisstar/vuepress-theme-extreme.git"
   },
   "author": "kisstar <dwh.chn@foxmail.com>",
   "license": "MIT",

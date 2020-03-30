@@ -5,18 +5,19 @@
   "main": "index.js",
   "scripts": {},
   "keywords": [
-    "webpack",
+    "theme",
     "vuepress",
     "vue",
-    "blog"
+    "blog",
+    "vuepress-theme-extreme"
   ],
-  "homepage": "https://github.com/kisstar/blog/packages/vuepress-theme-extreme#readme",
+  "homepage": "https://github.com/kisstar/vuepress-theme-extreme/packages/vuepress-theme-extreme#readme",
   "bugs": {
-    "url": "https://github.com/kisstar/blog/issues"
+    "url": "https://github.com/kisstar/vuepress-theme-extreme/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kisstar/blog.git",
+    "url": "git+https://github.com/kisstar/vuepress-theme-extreme.git",
     "directory": "packages/vuepress-theme-extreme"
   },
   "author": "kisstar <dwh.chn@foxmail.com>",

@@ -1,3 +1,3 @@
-# blog
+# vuepress-theme-extreme
 
-Kisstar's personal blog
+Black and white, a brief and extreme VuePress theme

@@ -3,5 +3,5 @@
   "*.less": ["stylelint --syntax less"],
   "*.vue": ["yarn run lint:vue"],
   "*.md": ["yarn run lint:md"],
-  "**/*.{js,jsx,tsx,ts,less,md,json}": ["prettier --write"]
+  "**/*.{js,vue,html,less,md,json}": ["prettier --write"]
 }

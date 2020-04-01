@@ -21,5 +21,9 @@
     "directory": "packages/vuepress-theme-extreme"
   },
   "author": "kisstar <dwh.chn@foxmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0"
+  }
 }

@@ -22,6 +22,9 @@
   },
   "author": "kisstar <dwh.chn@foxmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  },
   "devDependencies": {
     "less": "^3.11.1",
     "less-loader": "^5.0.0"

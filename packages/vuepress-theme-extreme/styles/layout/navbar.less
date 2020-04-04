@@ -1,0 +1,80 @@
+@height: 3.125rem;
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 1rem;
+  line-height: @height;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+
+    .logo {
+      height: @height - 1rem;
+      vertical-align: middle;
+    }
+  }
+
+  .navbar-toggler {
+    display: none;
+    margin: 0.5rem;
+    line-height: initial;
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .navbar-item {
+        position: relative;
+        margin-left: 1rem;
+
+        &::after {
+          position: absolute;
+          right: 100%;
+          bottom: 0;
+          left: 0;
+          height: 0.25rem;
+          transition: right 0.3s ease-out;
+          content: '';
+        }
+
+        &:hover {
+          &::after {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    .navbar-toggler {
+      display: inline-block;
+    }
+
+    .navbar-collapse {
+      flex-basis: 100%;
+
+      &:not(.show) {
+        display: none;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+    }
+  }
+}

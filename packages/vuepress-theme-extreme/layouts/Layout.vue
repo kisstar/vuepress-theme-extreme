@@ -1,6 +1,7 @@
 <template>
   <div class="theme-container">
     <div class="theme-extreme">
+      <Navbar />
       <Page />
     </div>
   </div>
@@ -8,9 +9,10 @@
 
 <script>
 import Page from '@theme/components/Page.vue';
+import Navbar from '@theme/components/Navbar.vue';
 
 export default {
   name: 'Layout',
-  components: { Page },
+  components: { Navbar, Page },
 };
 </script>

@@ -8,7 +8,6 @@
   line-height: @height;
 
   a {
-    display: inline-block;
     text-decoration: none;
   }
 
@@ -24,37 +23,81 @@
   .navbar-toggler {
     display: none;
     margin: 0.5rem;
+    padding: 0 0.5rem;
     line-height: initial;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    cursor: pointer;
   }
 
   .navbar-collapse {
     .navbar-nav {
       display: flex;
-      align-items: center;
       margin: 0;
       padding: 0;
-      list-style: none;
 
-      .navbar-item {
-        position: relative;
+      .navbar-item:not(.dropdown) {
         margin-left: 1rem;
+        .hover-line();
 
-        &::after {
-          position: absolute;
-          right: 100%;
-          bottom: 0;
-          left: 0;
-          height: 0.25rem;
-          transition: right 0.3s ease-out;
-          content: '';
-        }
-
-        &:hover {
-          &::after {
-            right: 0;
-          }
+        a {
+          display: inline-block;
         }
       }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    line-height: 2rem;
+
+    .dropdown-toggle {
+      height: @height;
+      margin-left: 1rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &.open {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      &::after {
+        position: relative;
+        top: 0.5rem;
+        left: 0.25rem;
+        display: inline-block;
+        border: 0.5rem solid;
+        transform-origin: 0.5rem 0.25rem;
+        transition: transform 500ms;
+        content: '';
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      left: 1rem;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid;
+
+      &:not(.open) {
+        display: none;
+      }
+
+      .group-name {
+        border-bottom: 1px solid;
+
+        & ~ .dropdown-link {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .dropdown-link {
+      display: block;
+      .hover-line();
     }
   }
 }
@@ -74,6 +117,12 @@
 
       .navbar-nav {
         flex-direction: column;
+      }
+    }
+
+    .dropdown {
+      .dropdown-menu {
+        position: static;
       }
     }
   }

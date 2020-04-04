@@ -6,6 +6,7 @@
     {{ item.text }}
   </RouterLink>
 </template>
+
 <script>
 export default {
   name: 'NavLink',

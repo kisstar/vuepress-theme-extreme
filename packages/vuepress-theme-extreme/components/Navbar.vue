@@ -9,13 +9,17 @@
       />
       <span v-if="$siteTitle">{{ $siteTitle }}</span>
     </RouterLink>
-    <button class="navbar-toggler" type="button">
+    <button class="navbar-toggler" type="button" @click="toggleShow">
       Toggle
     </button>
     <div :class="show ? 'navbar-collapse show' : 'navbar-collapse'">
       <ul class="navbar-nav">
-        <li v-for="item in userNav" :key="item.link" class="navbar-item">
-          <a v-if="item.items" href="">{{ item.text }}</a>
+        <li
+          v-for="item in userNav"
+          :key="item.link"
+          :class="['navbar-item', item.items ? 'dropdown' : '']"
+        >
+          <DropdownLink v-if="item.items" :item="item" />
           <NavLink v-else :item="item" />
         </li>
       </ul>
@@ -25,14 +29,21 @@
 
 <script>
 import NavLink from './NavLink.vue';
+import DropdownLink from './DropdownLink.vue';
 
 export default {
   name: 'Navbar',
   components: {
     NavLink,
+    DropdownLink,
   },
   data() {
     return { show: false };
+  },
+  methods: {
+    toggleShow() {
+      this.show = !this.show;
+    },
   },
   computed: {
     userNav() {

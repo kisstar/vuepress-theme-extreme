@@ -1,35 +1,35 @@
 .navbar {
-  background-color: var(--nav-bg);
+  background-color: @nav-bg;
 
   a {
-    color: var(--nav-color);
+    color: @nav-color;
   }
 
   .navbar-toggler {
-    color: var(--nav-color);
+    color: @nav-color;
     background-color: @transparent;
-    border-color: var(--nav-bd);
+    border-color: @nav-bd;
   }
 
   .dropdown-toggle {
-    color: var(--nav-color);
+    color: @nav-color;
     background: @transparent;
   }
 
   .dropdown {
     .dropdown-toggle {
       &::after {
-        border-color: var(--nav-bd) @transparent @transparent @transparent;
+        border-color: @nav-bd @transparent @transparent @transparent;
       }
     }
 
     .dropdown-menu {
-      background-color: var(--nav-bg);
-      border-top-color: var(--nav-dp-divide);
+      background-color: @nav-bg;
+      border-top-color: @nav-dp-divide;
 
       .group-name {
-        color: var(--nav-color);
-        border-bottom-color: var(--nav-bd);
+        color: @nav-color;
+        border-bottom-color: @nav-bd;
       }
     }
   }
@@ -38,7 +38,7 @@
 @media (max-width: 991.98px) {
   .navbar {
     .navbar-collapse {
-      border-top: 1px solid var(--nav-bd);
+      border-top: 1px solid @nav-bd;
     }
   }
 }

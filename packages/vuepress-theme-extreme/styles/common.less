@@ -21,12 +21,12 @@ code {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: linear-gradient(@transparent, var(--scrollbar-thumb));
+  background: linear-gradient(@transparent, @scrollbar-track);
   border-radius: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
+  background: @scrollbar-thumb;
   border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ code {
     bottom: 0;
     left: 0;
     height: 0.25rem;
-    background: var(--nav-active-color);
+    background: @nav-active-color;
     transition: right 0.3s ease-out;
     content: '';
   }

@@ -51,6 +51,18 @@
     position: relative;
     line-height: 2rem;
 
+    &:hover {
+      .dropdown-toggle {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      .dropdown-menu {
+        display: block !important;
+      }
+    }
+
     .dropdown-toggle {
       height: @height;
       margin-left: 1rem;
@@ -97,6 +109,7 @@
 
     .dropdown-link {
       display: block;
+      white-space: nowrap;
       .hover-line();
     }
   }

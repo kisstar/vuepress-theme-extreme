@@ -21,16 +21,14 @@
 </template>
 
 <script>
+import VueTypes from '../lib/vue-types';
 import NavLink from './NavLink.vue';
 
 export default {
   name: 'DropdownLink',
   components: { NavLink },
   props: {
-    item: {
-      type: Object,
-      default: () => {},
-    },
+    item: VueTypes.object.def(() => {}),
   },
   data() {
     return {

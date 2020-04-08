@@ -2,13 +2,12 @@
   <div :class="['divider', type]"></div>
 </template>
 <script>
+import VueTypes from '../lib/vue-types';
+
 export default {
   name: 'Divider',
   props: {
-    type: {
-      type: String,
-      default: 'horizontal',
-    },
+    type: VueTypes.string.def('horizontal'),
   },
 };
 </script>

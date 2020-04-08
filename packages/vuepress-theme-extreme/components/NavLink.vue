@@ -8,13 +8,12 @@
 </template>
 
 <script>
+import VueTypes from '../lib/vue-types';
+
 export default {
   name: 'NavLink',
   props: {
-    item: {
-      type: Object,
-      default: () => {},
-    },
+    item: VueTypes.object.def(() => {}),
   },
 };
 </script>

@@ -13,6 +13,7 @@
 
 @dark: hsl(210, 1%, 11%);
 @white: hsl(0, 0%, 100%);
+@half-transparent: hsla(0, 0%, 0%, 0.5);
 @transparent: hsla(0, 0%, 0%, 0);
 
 body {
@@ -26,6 +27,12 @@ body {
   --nav-active-color: @secondary;
   --nav-bd: @gray-100;
   --nav-dp-divide: @dark;
+
+  // banner
+  --banner-search-bg: @half-transparent;
+  --banner-input-bg: @white;
+  --banner-button-bg: @primary;
+  --banner-button-color: @white;
 }
 
 @scrollbar-track: var(--scrollbar-track);
@@ -36,3 +43,8 @@ body {
 @nav-active-color: var(--nav-active-color);
 @nav-bd: var(--nav-bd);
 @nav-dp-divide: var(--nav-dp-divide);
+
+@banner-search-bg: var(--banner-search-bg);
+@banner-input-bg: var(--banner-input-bg);
+@banner-button-bg: var(--banner-button-bg);
+@banner-button-color: var(--banner-button-color);

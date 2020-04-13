@@ -2,17 +2,19 @@
   <div class="theme-container">
     <div class="theme-extreme">
       <Navbar />
-      <Page />
+      <Home v-if="$page.frontmatter.home" />
+      <Page v-else />
     </div>
   </div>
 </template>
 
 <script>
-import Page from '@theme/components/Page.vue';
 import Navbar from '@theme/components/Navbar.vue';
+import Home from '@theme/components/home/index.vue';
+import Page from '@theme/components/Page.vue';
 
 export default {
   name: 'Layout',
-  components: { Navbar, Page },
+  components: { Navbar, Home, Page },
 };
 </script>

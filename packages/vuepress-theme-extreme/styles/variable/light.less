@@ -17,6 +17,9 @@
 @transparent: hsla(0, 0%, 0%, 0);
 
 body {
+  // text
+  --text-muted: @gray-600;
+
   // scrollbar
   --scrollbar-track: @gray-300;
   --scrollbar-thumb: @gray-600;
@@ -33,7 +36,15 @@ body {
   --banner-input-bg: @white;
   --banner-button-bg: @primary;
   --banner-button-color: @white;
+
+  // timeline
+  --timeline-line-bd: @secondary;
+  --timeline-line-bg: @white;
+  --timeline-node-bg: lighten(@secondary, 20%);
+  --timeline-img-bd: @white;
 }
+
+@text-muted: var(--text-muted);
 
 @scrollbar-track: var(--scrollbar-track);
 @scrollbar-thumb: var(--scrollbar-thumb);
@@ -48,3 +59,8 @@ body {
 @banner-input-bg: var(--banner-input-bg);
 @banner-button-bg: var(--banner-button-bg);
 @banner-button-color: var(--banner-button-color);
+
+@timeline-line-bd: var(--timeline-line-bd);
+@timeline-node-bg: var(--timeline-node-bg);
+@timeline-line-bg: var(--timeline-line-bg);
+@timeline-img-bd: var(--timeline-img-bd);

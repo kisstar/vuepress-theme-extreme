@@ -1,0 +1,121 @@
+@line-pl: 1.5rem;
+@line-width: 0.25rem;
+@circle-size: 1rem;
+@circle-bd-width: 0.25rem;
+@time-node-mh: 1rem;
+
+.timeline {
+  max-width: 25rem;
+  padding: 1.5rem 0 @line-pl 0;
+  border-left: @line-width solid;
+  transform: translateX(50%);
+
+  .time-node {
+    position: relative;
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-radius: 4px;
+
+    &:nth-child(even) {
+      margin-left: @time-node-mh;
+
+      &::before {
+        padding-right: @line-pl * 2;
+        text-align: right;
+        transform: translateX(-100%);
+      }
+
+      &::after {
+        left: @time-node-mh * -1 - @line-width / 2;
+        transform: translateX(-50%);
+      }
+    }
+
+    &:nth-child(odd) {
+      left: -100%;
+      margin-right: @time-node-mh;
+
+      &::before {
+        right: 0;
+        padding-left: @line-pl / 2 + @time-node-mh;
+        text-align: left;
+        transform: translateX(100%);
+      }
+
+      &::after {
+        right: @time-node-mh * -1 + @line-width / 2;
+        transform: translateX(50%);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      min-width: 7.5rem;
+      content: attr(data-title);
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      width: @circle-size;
+      height: @circle-size;
+      border: @circle-bd-width solid;
+      border-radius: 50%;
+      content: '';
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.25rem;
+      text-indent: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: 12.5rem;
+      border: 1px solid;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .timeline {
+    transform: translateX(0);
+
+    .time-node {
+      &:nth-child(odd) {
+        left: 0;
+        margin-right: 0;
+        margin-left: @time-node-mh;
+
+        &::before {
+          position: static;
+          padding-left: 0;
+        }
+
+        &::after {
+          left: @time-node-mh * -1 - @line-width / 2;
+          transform: translateX(-50%);
+        }
+      }
+
+      &:nth-child(even) {
+        &::before {
+          position: static;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

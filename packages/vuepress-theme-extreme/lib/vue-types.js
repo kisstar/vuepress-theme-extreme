@@ -23,11 +23,7 @@ function getTypes(arr) {
 }
 
 function getType(type, validator = '', customType = null) {
-  const props = Object.create(null, {
-    type: {
-      value: customType || typesMap[type],
-    },
-  });
+  const props = { type: customType || typesMap[type] };
 
   Object.defineProperty(props, 'isRequired', {
     get() {

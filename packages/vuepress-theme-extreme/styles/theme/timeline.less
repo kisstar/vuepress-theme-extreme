@@ -1,0 +1,32 @@
+.timeline {
+  border-left-color: @timeline-line-bd;
+
+  .time-node {
+    background-color: @timeline-node-bg;
+
+    &::after {
+      background-color: @timeline-line-bg;
+      border-color: @timeline-line-bd;
+    }
+
+    p {
+      color: @text-muted;
+    }
+
+    img {
+      border-color: @timeline-img-bd;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .timeline {
+    .time-node {
+      &:nth-child(n) {
+        &::before {
+          color: @text-muted;
+        }
+      }
+    }
+  }
+}

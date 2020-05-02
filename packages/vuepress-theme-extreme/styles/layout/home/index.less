@@ -1,11 +1,12 @@
 @import './recent-update.less';
+@import './footer.less';
 
-@input-height: 68px;
+@input-height: 4.25rem;
 
 .home {
   .banner {
     position: relative;
-    height: 400px;
+    height: 25rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -17,26 +18,36 @@
       align-items: center;
       justify-content: center;
       width: 80%;
-      height: 200px;
-      padding: 0 16px;
+      height: 12.5rem;
+      padding: 0 1rem;
       transform: translate(-50%, 50%);
 
       input {
         display: block;
         width: 80%;
-        max-width: 500px;
+        max-width: 31.25rem;
         height: @input-height;
-        padding: 10px 32px;
+        padding: 0.625rem 2rem;
         font-size: 20px;
         border: none;
       }
 
       button {
-        width: 200px;
+        width: 12.5rem;
         height: @input-height;
         font-size: 20px;
         border: none;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .home {
+    .banner {
+      .search-wrapper {
+        width: 100%;
       }
     }
   }

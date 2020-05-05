@@ -1,4 +1,4 @@
-@height: 3.125rem;
+@height: 4rem;
 
 .navbar {
   display: flex;
@@ -12,11 +12,13 @@
   }
 
   .navbar-brand {
+    display: flex;
+    align-items: center;
     font-size: 1.25rem;
 
     .logo {
       height: @height - 1rem;
-      vertical-align: middle;
+      margin-right: 0.5rem;
     }
   }
 
@@ -117,6 +119,13 @@
 
 @media (max-width: 991.98px) {
   .navbar {
+    .navbar-brand {
+      span {
+        width: calc(100vw - 12rem);
+        .text-ellipsis();
+      }
+    }
+
     .navbar-toggler {
       display: inline-block;
     }

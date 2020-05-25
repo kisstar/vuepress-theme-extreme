@@ -1,0 +1,29 @@
+.swiper {
+  position: relative;
+  overflow: hidden;
+
+  .swiper-item {
+    width: 100%;
+  }
+
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: transform 1s ease-in;
+  }
+
+  // 解决前一项还没移除视口，后者紧随其后，导致两则上下同时显示
+  // 为此给进入的一项在进入期间设置绝对定位，让其不占高度，从而两则保持水平移动
+  .slide-enter-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slide-leave-to {
+    transform: translateX(-100%);
+  }
+
+  .slide-enter {
+    transform: translateX(100%);
+  }
+}

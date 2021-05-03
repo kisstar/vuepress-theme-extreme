@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import VurTypes from '../../lib/vue-types';
+import VueTypes from '../../lib/vue-types';
 
 export default {
   name: 'Banner',
   props: {
-    bgImage: VurTypes.string,
+    bgImage: VueTypes.string,
   },
 };
 </script>

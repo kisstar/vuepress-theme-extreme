@@ -21,8 +21,8 @@
   "author": "kisstar <dwh.chn@foxmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "markdownlint": "^0.19.0",
-    "markdownlint-cli": "^0.22.0",
+    "markdownlint": "^0.23.1",
+    "markdownlint-cli": "^0.27.0",
     "vuepress": "^1.4.0"
   },
   "dependencies": {

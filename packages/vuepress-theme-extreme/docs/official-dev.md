@@ -1,0 +1,153 @@
+# 开发说明
+
+想要书写一个主题，你可以文档根目录创建一个 `.vuepress/theme` 目录。
+
+```bash
+theme
+├── global-components # 全局组件
+│   └── xxx.vue
+├── components
+│   └── xxx.vue
+├── layouts # 布局组件
+│   ├── Layout.vue (必要的)
+│   ├── AnotherLayout.vue
+│   └── 404.vue
+├── styles # 全局的样式和调色板
+│   ├── index.styl
+│   └── palette.styl
+├── templates # 修改默认的模板文件
+│   ├── dev.html
+│   └── ssr.html
+├── index.js #  主题文件的入口文件
+├── enhanceApp.js # 主题的增强文件
+└── package.json
+```
+
+## 渲染信息
+
+所有的页面将会默认使用 `Layout.vue` 作为布局组件，对于那些匹配不到的路由将会使用 `404.vue`。
+
+果你想要在某一个页面中使用 `AnotherLayout.vue` 作为布局组件，那么你只需要更新这个页面：
+
+```md
+---
+layout: AnotherLayout
+---
+```
+
+每个 `.md` 文件渲染的内容，可以作为一个独特的全局组件 `<Content/>` 来使用，你可能想要它显示在页面中的某个地方。
+
+```html
+<!-- Layout.vue -->
+<template>
+  <div class="theme-container">
+    <content />
+  </div>
+</template>
+```
+
+通过 layout 指定的组件都可能会渲染出截然不同的页面，如果你想设置一些全局的 UI（如全局的导航栏），可以考虑使用 globalLayout。
+
+```vue
+<template>
+  <div id="global-layout">
+    <header><h1>Header</h1></header>
+    <component :is="layout" />
+    <footer><h1>Footer</h1></footer>
+  </div>
+</template>
+
+<script>
+export default {
+  computed: {
+    layout() {
+      if (this.$page.path) {
+        if (this.$frontmatter.layout) {
+          // 你也可以像默认的 globalLayout 一样首先检测 layout 是否存在
+          return this.$frontmatter.layout;
+        }
+        return 'Layout';
+      }
+      return 'NotFound';
+    },
+  },
+};
+</script>
+```
+
+可见，全局布局组件是负责管理全局布局方案的一个组件。
+
+## 网站和页面的元数据
+
+Layout 组件将会对每一个文档目录下的 `.md` 执行一次。同时，整个网站以及特定页面的元数据将分别暴露为 `this.$site` 和 `this.$page` 属性，它们将会被注入到每一个当前应用的组件中。
+
+```js
+this.$site = {
+  title: 'VuePress',
+  description: 'Vue 驱动的静态网站生成器',
+  base: '/',
+  pages: [
+    {
+      lastUpdated: 1524027677000,
+      path: '/',
+      title: 'VuePress',
+      frontmatter: {},
+    },
+    // ...
+  ],
+};
+```
+
+其中，title, description 和 base 会从 `.vuepress/config.js` 中对应的的字段复制过来，而 pages 是一个包含了每个页面元数据对象的数据，包括它的路径、页面标题，以及所有源文件中的 YAML front matter 的数据。
+
+```js
+this.$page = {
+  lastUpdated: 1524847549000,
+  path: '/custom-themes.html',
+  title: '自定义主题',
+  headers: [
+    /* ... */
+  ],
+  frontmatter: {},
+};
+```
+
+如果用户在 `.vuepress/config.js` 配置了 themeConfig，你将可以通过 `$site.themeConfig` 访问到它。
+
+如此一来，你可以通过它来对用户开放一些自定义主题的配置 —— 比如指定目录或者页面的顺序，你也可以结合 `$site.pages` 来动态地构建导航链接。
+
+另外，如果一个 Markdown 文件中有一个 `<!-- more -->` 注释，则该注释之前的内容会被抓取并暴露在 `$page.excerpt` 属性中。
+
+最后，别忘了，作为 Vue Router API 的一部分，`this.$route` 和 `this.$router` 同样可以使用。
+
+## 应用增强
+
+你可以通过主题的配置文件 `themePath/index.js` 来给主题应用一些插件：
+
+```js
+// .vuepress/theme/index.js
+module.exports = {
+  plugins: [
+    '@vuepress/pwa',
+    {
+      serviceWorker: true,
+      updatePopup: true,
+    },
+  ],
+};
+```
+
+自定义主题也可以通过主题根目录下的 `enhanceApp.js` 文件来对 VuePress 应用进行拓展配置。这个文件应当默认导出一个钩子函数：
+
+```js
+export default ({
+  Vue, // VuePress 正在使用的 Vue 构造函数
+  options, // 附加到根实例的一些选项
+  router, // 当前应用的路由实例
+  siteData, // 站点元数据
+}) => {
+  // ...做一些其他的应用级别的优化
+};
+```
+
+在通过参数拿到一些应用级别属性的对象后，我们就可以增强应用，比如安装 Vue 插件、注册全局组件，或者增加额外的路由钩子等。

@@ -41,6 +41,7 @@ export default {
     },
     closeDropdownMenu(e) {
       if (e.target === this.$refs.toggleButton) return;
+
       this.open = false;
     },
   },

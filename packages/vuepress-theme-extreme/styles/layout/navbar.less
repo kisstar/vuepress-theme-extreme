@@ -7,8 +7,12 @@
   padding: 0 1rem;
   line-height: @height;
 
-  a {
-    text-decoration: none;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
   }
 
   .navbar-brand {
@@ -40,7 +44,8 @@
 
       .navbar-item:not(.dropdown) {
         margin-left: 1rem;
-        .hover-line();
+        padding: 0 0.5rem;
+        // .hover-line();
 
         a {
           display: inline-block;
@@ -111,8 +116,9 @@
 
     .dropdown-link {
       display: block;
+      padding: 0.2rem 0.5rem 0;
       white-space: nowrap;
-      .hover-line();
+      // .hover-line();
     }
   }
 }

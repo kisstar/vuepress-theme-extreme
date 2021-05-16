@@ -1,6 +1,6 @@
 ---
 home: true
-bannerBg: images/kelly-sikkema.jpg
+bannerBg: images/banner.jpg
 ---
 
 # HomePage

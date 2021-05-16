@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Timeline from '../Timeline.vue';
+import Timeline from '@theme/components/Timeline.vue';
 
 export default {
   name: 'RecentUpdate',

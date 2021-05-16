@@ -3,18 +3,18 @@
     <div class="theme-extreme">
       <Navbar />
       <Home v-if="$page.frontmatter.home" />
-      <Page v-else />
+      <Article v-else />
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from '@theme/components/Navbar.vue';
-import Home from '@theme/components/home/index.vue';
-import Page from '@theme/components/Page.vue';
+import Home from '@theme/pages/home/index.vue';
+import Article from '@theme/pages/article/index.vue';
 
 export default {
   name: 'Layout',
-  components: { Navbar, Home, Page },
+  components: { Navbar, Home, Article },
 };
 </script>

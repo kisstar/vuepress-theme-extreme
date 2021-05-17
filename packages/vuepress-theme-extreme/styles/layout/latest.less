@@ -1,0 +1,53 @@
+.latest {
+  .latest-item {
+    display: flex;
+    padding: 1.5rem 0;
+  }
+
+  .thumbnail {
+    align-self: flex-start;
+    width: 160px;
+    margin-right: 1.5rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+
+    .excerpt {
+      line-height: 1.5;
+    }
+
+    .excerpt,
+    .time {
+      font-size: 0.875rem; // 14px
+    }
+
+    .time {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .latest {
+    .latest-item {
+      flex-direction: column;
+    }
+
+    .thumbnail {
+      width: 100%;
+    }
+
+    .content {
+      .title {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

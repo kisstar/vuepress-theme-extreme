@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="copyright-container">
       <p>
         Theme developed by
@@ -10,7 +10,7 @@
       </p>
       <p>Copyright © 2020. All Rights Reserved.</p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

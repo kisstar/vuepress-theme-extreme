@@ -1,12 +1,7 @@
 <template>
   <header class="navbar fixed">
     <RouterLink :to="$localePath" class="navbar-brand">
-      <img
-        v-if="$site.themeConfig.logo"
-        class="logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      />
+      <img class="logo" :src="$withBase($site.themeConfig.logo || logo)" :alt="$siteTitle" />
       <span v-if="$siteTitle">{{ $siteTitle }}</span>
     </RouterLink>
     <button class="navbar-toggler" type="button" @click="toggleShow">
@@ -48,6 +43,7 @@
 </template>
 
 <script>
+import logo from '@theme/assets/logo.png';
 import NavLink from './NavLink.vue';
 import DropdownLink from './DropdownLink.vue';
 
@@ -58,7 +54,10 @@ export default {
     DropdownLink,
   },
   data() {
-    return { show: false };
+    return {
+      show: false,
+      logo,
+    };
   },
   methods: {
     toggleShow() {

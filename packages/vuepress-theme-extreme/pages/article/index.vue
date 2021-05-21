@@ -1,7 +1,7 @@
 <template>
-  <main class="page">
+  <article class="theme-content-container">
     <Content class="theme-content" />
-  </main>
+  </article>
 </template>
 
 <script>

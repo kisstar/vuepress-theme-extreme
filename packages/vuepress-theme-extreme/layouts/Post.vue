@@ -1,8 +1,8 @@
 <template>
-  <div class="theme-container home">
+  <div class="theme-container post">
     <div class="theme-extreme">
       <Navbar />
-      <Home />
+      <Article />
       <Footer />
     </div>
   </div>
@@ -10,11 +10,11 @@
 
 <script>
 import Navbar from '@theme/components/Navbar.vue';
-import Home from '@theme/pages/home/index.vue';
+import Article from '@theme/pages/article/index.vue';
 import Footer from '@theme/components/Footer.vue';
 
 export default {
   name: 'Layout',
-  components: { Navbar, Home, Footer },
+  components: { Navbar, Article, Footer },
 };
 </script>

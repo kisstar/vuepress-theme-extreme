@@ -1,18 +1,22 @@
 <template>
-  <main class="home">
-    <Banner :bgImage="$withBase($page.frontmatter.bannerBg)" />
+  <main>
+    <Banner :bgImage="$withBase($themeConfig.banner || banner)" />
     <RecentUpdate />
-    <Footer />
   </main>
 </template>
 
 <script>
+import banner from '@theme/assets/images/banner.jpg';
 import Banner from './Banner.vue';
 import RecentUpdate from './RecentUpdate.vue';
-import Footer from './Footer.vue';
 
 export default {
   name: 'Home',
-  components: { Banner, RecentUpdate, Footer },
+  components: { Banner, RecentUpdate },
+  data() {
+    return {
+      banner,
+    };
+  },
 };
 </script>

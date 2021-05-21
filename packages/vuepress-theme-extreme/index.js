@@ -23,6 +23,8 @@ module.exports = (themeConfig, ctx) => {
         id: 'post',
         dirname: 'posts',
         path: '/',
+        layout: 'Layout', // default: IndexPost, fallback to Layout
+        itemLayout: 'Post', // default: Post
       },
     ],
     frontmatters: [

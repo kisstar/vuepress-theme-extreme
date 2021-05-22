@@ -1,8 +1,7 @@
-module.exports = _ctx => ({
+module.exports = ctx => ({
   theme: 'vuepress-theme-extreme',
   title: "Kisstar's 博客",
   themeConfig: {
-    logo: 'extreme.png',
     nav: [
       {
         text: '博客园',
@@ -39,6 +38,13 @@ module.exports = _ctx => ({
         link: 'https://github.com/kisstar',
         target: '_blank',
         rel: 'noopener noreferrer',
+      },
+    ],
+    directories: [
+      {
+        id: 'post',
+        dirname: 'vuepress',
+        path: '/',
       },
     ],
   },

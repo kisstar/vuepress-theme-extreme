@@ -4,9 +4,9 @@
   "description": "A blog with vuepress theme",
   "private": true,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "lint:md": "markdownlint ./docs/**/*.md"
+    "dev": "vuepress dev posts --open --no-clear-screen",
+    "build": "vuepress build posts",
+    "lint:md": "markdownlint ./posts/**/*.md"
   },
   "keywords": [
     "theme",

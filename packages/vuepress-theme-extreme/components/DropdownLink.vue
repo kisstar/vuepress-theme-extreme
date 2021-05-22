@@ -7,14 +7,14 @@
       <li class="dropdown-item" v-for="subItem in item.items" :key="subItem.link">
         <h4 v-if="subItem.items" class="group-name">{{ subItem.text }}</h4>
         <template v-if="subItem.items">
-          <NavLink
+          <Link
             v-for="subChild in subItem.items"
             :key="subChild.link"
             :item="subChild"
             class="dropdown-link"
           />
         </template>
-        <NavLink v-else :item="subItem" class="dropdown-link" />
+        <Link v-else :item="subItem" class="dropdown-link" />
       </li>
     </ul>
   </div>
@@ -22,11 +22,11 @@
 
 <script>
 import VueTypes from '@theme/lib/vue-types';
-import NavLink from '@theme/components/NavLink.vue';
+import Link from '@theme/components/Link.vue';
 
 export default {
   name: 'DropdownLink',
-  components: { NavLink },
+  components: { Link },
   props: {
     item: VueTypes.object.def(() => {}),
   },

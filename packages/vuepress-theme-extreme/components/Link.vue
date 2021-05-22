@@ -11,7 +11,7 @@
 import VueTypes from '@theme/lib/vue-types';
 
 export default {
-  name: 'NavLink',
+  name: 'Link',
   props: {
     item: VueTypes.object.def(() => {}),
   },

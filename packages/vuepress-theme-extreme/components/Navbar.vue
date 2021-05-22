@@ -35,7 +35,7 @@
           :class="['navbar-item', item.items ? 'dropdown' : '']"
         >
           <DropdownLink v-if="item.items" :item="item" />
-          <NavLink v-else :item="item" />
+          <Link v-else :item="item" />
         </li>
       </ul>
     </div>
@@ -44,13 +44,13 @@
 
 <script>
 import logo from '@theme/assets/logo.png';
-import NavLink from '@theme/components/NavLink.vue';
+import Link from '@theme/components/Link.vue';
 import DropdownLink from '@theme/components/DropdownLink.vue';
 
 export default {
   name: 'Navbar',
   components: {
-    NavLink,
+    Link,
     DropdownLink,
   },
   data() {

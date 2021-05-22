@@ -1,4 +1,4 @@
-import { sharedPropertyDefinition, isFunction, isArray, error } from './util';
+import { sharedPropertyDefinition, isFunction, isArray, error } from '@theme/lib/util';
 
 const typesMap = {
   any: null,

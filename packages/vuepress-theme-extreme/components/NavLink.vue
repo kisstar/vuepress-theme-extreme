@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import VueTypes from '../lib/vue-types';
+import VueTypes from '@theme/lib/vue-types';
 
 export default {
   name: 'NavLink',

@@ -1,5 +1,5 @@
-import { filterEmpty } from '../../lib/util';
-import VueTypes from '../../lib/vue-types';
+import { filterEmpty } from '@theme/lib/util';
+import VueTypes from '@theme/lib/vue-types';
 
 export default {
   name: 'Swiper',

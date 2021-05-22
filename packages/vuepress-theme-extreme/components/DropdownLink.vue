@@ -21,8 +21,8 @@
 </template>
 
 <script>
-import VueTypes from '../lib/vue-types';
-import NavLink from './NavLink.vue';
+import VueTypes from '@theme/lib/vue-types';
+import NavLink from '@theme/components/NavLink.vue';
 
 export default {
   name: 'DropdownLink',

@@ -44,8 +44,8 @@
 
 <script>
 import logo from '@theme/assets/logo.png';
-import NavLink from './NavLink.vue';
-import DropdownLink from './DropdownLink.vue';
+import NavLink from '@theme/components/NavLink.vue';
+import DropdownLink from '@theme/components/DropdownLink.vue';
 
 export default {
   name: 'Navbar',

@@ -42,6 +42,12 @@ body {
   --timeline-line-bg: @white;
   --timeline-node-bg: lighten(@secondary, 20%);
   --timeline-img-bd: @white;
+
+  // pagination toggle
+  --pagination-toggle-bg: @gray-100;
+  --pagination-toggle-active-bg: @white;
+  --pagination-toggle-color: @gray-600;
+  --pagination-toggle-active-color: @secondary;
 }
 
 @text-muted: var(--text-muted);
@@ -67,6 +73,11 @@ body {
 @timeline-img-bd: var(--timeline-img-bd);
 
 @latest-time-color: @text-muted;
+
+@pagination-toggle-color: var(--pagination-toggle-color);
+@pagination-toggle-bg: var(--pagination-toggle-bg);
+@pagination-toggle-active-color: var(--pagination-toggle-active-color);
+@pagination-toggle-active-bg: var(--pagination-toggle-active-bg);
 
 // footer
 @footer-bg: var(--nav-bg);

@@ -1,7 +1,7 @@
 <template>
   <ul class="latest">
     <li class="latest-item" v-for="item in pages" :key="item.key">
-      <img class="thumbnail" v-if="item.thumbnail" :src="item.thumbnail" />
+      <img class="thumbnail" v-if="item.thumbnail" :src="$withBase(item.thumbnail)" />
       <div class="content">
         <h3 class="title">
           <Link :item="item.link" />

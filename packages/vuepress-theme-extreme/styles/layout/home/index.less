@@ -1,13 +1,14 @@
 @import './recent-update.less';
 
+@banner-height: 30rem;
 @input-height: 4.25rem;
 
 .home {
   .banner {
     position: relative;
-    height: 30rem;
+    height: @banner-height;
     background-repeat: no-repeat;
-    background-size: 100% 30rem;
+    background-size: 100% @banner-height;
     background-attachment: fixed;
 
     .title-wrapper {
@@ -52,6 +53,11 @@
         cursor: pointer;
       }
     }
+  }
+
+  .see-more {
+    margin-bottom: 5rem;
+    text-align: center;
   }
 }
 

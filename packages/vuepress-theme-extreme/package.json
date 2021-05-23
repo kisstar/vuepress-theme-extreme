@@ -23,10 +23,10 @@
   "author": "kisstar <dwh.chn@foxmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@vuepress/plugin-blog": "^1.9.4",
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "@vuepress/theme-blog": "^2.3.3",
     "less": "^3.11.1",
     "less-loader": "^5.0.0"
   }

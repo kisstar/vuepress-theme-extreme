@@ -4,7 +4,7 @@
       <h3>
         <Link :item="item.link" />
       </h3>
-      <img v-if="item.thumbnail" :src="item.thumbnail" />
+      <img v-if="item.thumbnail" :src="$withBase(item.thumbnail)" />
       <p>{{ item.summary || item.excerpt }}</p>
     </li>
   </ul>

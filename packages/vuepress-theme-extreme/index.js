@@ -3,46 +3,32 @@
  * @description 导出主题的配置，可以应用一些插件
  */
 
-const path = require('path');
+const { resolve } = require('path');
 
-const resolve = (...p) => path.resolve(__dirname, '../', ...p);
+const { getBlogPluginOptions } = require('./node/options');
 
 /**
- * @param {Object} themeConfig 用户对主题的配置，由当前主题处理实现
+ * @param {Object} themeConf 用户对主题的配置，由当前主题处理实现
  * @param {Object} ctx 编译期上下文
  * @returns 主题本身的配置，由 VuePress 本身提供支持
  */
-module.exports = (themeConfig, ctx) => {
-  const oThemeConfig = {
-    globalLayout: resolve('layouts'),
-    ...themeConfig,
+module.exports = (themeConf, ctx) => {
+  const config = {};
+  const plugins = [];
+  // Merge default theme configuration
+  const themeConfig = {
+    globalLayout: resolve(__dirname, 'layouts'),
+    ...themeConf,
   };
-  const blogPluginOptions = {
-    directories: [
-      {
-        id: 'post',
-        dirname: 'posts',
-        path: '/',
-        layout: 'Layout', // default: IndexPost, fallback to Layout
-        itemLayout: 'Post', // default: Post
-      },
-    ],
-    frontmatters: [
-      {
-        id: 'tag',
-        keys: ['tags'],
-        path: '/tag/',
-      },
-    ],
-    globalPagination: {
-      lengthPerPage: 10,
-    },
-  };
-  const plugins = [['@vuepress/blog', blogPluginOptions]];
-  const config = {
-    themeConfig: oThemeConfig,
+  const blogPluginOptions = getBlogPluginOptions(themeConfig);
+
+  plugins.push(['@vuepress/blog', blogPluginOptions]);
+
+  // 获取处理后的配置
+  Object.assign(config, {
+    themeConfig,
     plugins,
-  };
+  });
 
   return config;
 };

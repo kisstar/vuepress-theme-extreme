@@ -6,8 +6,10 @@
 
   .thumbnail {
     align-self: flex-start;
-    width: 160px;
+    width: 10rem;
+    height: 6.25rem;
     margin-right: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   }
 
   .content {
@@ -16,7 +18,7 @@
 
     .title {
       margin-bottom: 0.8rem;
-      font-size: 1rem;
+      font-size: 16px;
     }
 
     .excerpt {
@@ -25,11 +27,29 @@
 
     .excerpt,
     .time {
-      font-size: 0.875rem; // 14px
+      font-size: 14px;
     }
 
     .time {
+      display: flex;
+      align-items: center;
       margin-top: 1rem;
+
+      svg {
+        margin-right: 0.3rem;
+        width: 0.875rem;
+        height: 0.875rem;
+
+        &:nth-child(2) {
+          margin-left: 1rem;
+        }
+      }
+
+      a {
+        &:not(:nth-of-type(1)) {
+          margin-left: 0.3rem;
+        }
+      }
     }
   }
 }

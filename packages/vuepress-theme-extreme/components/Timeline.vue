@@ -1,20 +1,49 @@
 <template>
   <ul class="timeline">
-    <li class="time-node" v-for="item in data" :key="item.link" :data-title="item.time">
-      <h3>{{ item.title }}</h3>
+    <li class="time-node" v-for="item in pages" :key="item.key" :data-title="item.time">
+      <h3>
+        <Link :item="item.link" />
+      </h3>
       <img v-if="item.thumbnail" :src="item.thumbnail" />
-      <p>{{ item.excerpt }}</p>
+      <p>{{ item.summary || item.excerpt }}</p>
     </li>
   </ul>
 </template>
 
 <script>
-import VueTypes from '@theme/lib/vue-types';
+import Link from '@theme/components/Link.vue';
+
+const getDateStr = date => new Date(date).toLocaleDateString().replace(/\//g, '-');
 
 export default {
   name: 'Timeline',
-  props: {
-    data: VueTypes.array.def(() => []),
+  components: {
+    Link,
+  },
+  computed: {
+    pages() {
+      return this.$pagination.pages.map(page => {
+        const {
+          key,
+          frontmatter: { thumbnail, summary, date },
+          title,
+          excerpt,
+          path,
+        } = page;
+
+        return {
+          key,
+          thumbnail,
+          summary,
+          excerpt,
+          link: {
+            text: title,
+            link: path,
+          },
+          time: date && getDateStr(date),
+        };
+      });
+    },
   },
 };
 </script>

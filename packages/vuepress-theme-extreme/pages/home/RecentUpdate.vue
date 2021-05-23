@@ -1,17 +1,17 @@
 <template>
   <div class="recent-update">
     <div class="title">最近更新</div>
-    <Timeline />
+    <Latest />
   </div>
 </template>
 
 <script>
-import Timeline from '@theme/components/Timeline.vue';
+import Latest from '@theme/components/Latest.vue';
 
 export default {
   name: 'RecentUpdate',
   components: {
-    Timeline,
+    Latest,
   },
 };
 </script>

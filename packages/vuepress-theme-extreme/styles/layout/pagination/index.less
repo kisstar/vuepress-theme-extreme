@@ -1,8 +1,12 @@
 .page {
+  .theme-extreme {
+    .stretch-screen();
+  }
+
   .page-title {
     display: flex;
     align-items: center;
-    margin: 4rem auto;
+    margin: 0 auto;
     width: 12rem;
     font-weight: 700;
     font-size: 1.5rem;
@@ -27,16 +31,12 @@
 
   // 最近更新的列表
   .latest {
-    margin: 0 auto;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    width: 100%;
-    max-width: calc(750px + 10vw);
+    .article-list-container-size();
   }
 
   // 分页器居中
   .pagination-container {
+    margin-bottom: 4rem;
     text-align: center;
-    margin: 4rem auto;
   }
 }

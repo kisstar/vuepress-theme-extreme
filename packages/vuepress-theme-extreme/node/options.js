@@ -13,9 +13,16 @@ exports.getBlogPluginOptions = function getBlogPluginOptions(themeConfig) {
     ],
     frontmatters: [
       {
+        // Unique ID of current classification
         id: 'tag',
-        keys: ['tags'],
+        // Decide that the frontmatter keys will be grouped under this classification
+        keys: ['tag', 'tags'],
+        // Path of the `entry page` (or `list page`)
         path: '/tag/',
+        // Layout of the `entry page`
+        layout: 'Tags',
+        // Layout of the `scope page`
+        scopeLayout: 'Tag',
       },
     ],
     globalPagination: {

@@ -1,6 +1,6 @@
 @import './recent-update.less';
 
-@banner-height: 30rem;
+@banner-height: 26rem;
 @input-height: 4.25rem;
 
 .home {
@@ -8,12 +8,12 @@
     position: relative;
     height: @banner-height;
     background-repeat: no-repeat;
-    background-size: 100% @banner-height;
+    background-size: 100% @banner-height + @navbar-height;
     background-attachment: fixed;
 
     .title-wrapper {
       .title {
-        padding: 8rem 1rem 1em;
+        padding: 4rem 1rem 1em;
         font-weight: 900;
         font-size: 3rem;
       }

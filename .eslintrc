@@ -20,7 +20,8 @@
         "config": {
           "resolve": {
             "alias": {
-              "@theme": "vuepress-theme-extreme"
+              "@app": "@vuepress/core/lib/client",
+              "@theme": "vuepress-theme-extreme",
             }
           }
         }

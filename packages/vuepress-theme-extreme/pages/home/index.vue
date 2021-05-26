@@ -1,11 +1,11 @@
 <template>
-  <main>
+  <section>
     <Banner :bgImage="$withBase($themeConfig.banner || banner)" />
     <RecentUpdate />
     <div v-if="$pagination.length > 1" class="see-more">
       <Link :item="link" />
     </div>
-  </main>
+  </section>
 </template>
 
 <script>

@@ -1,0 +1,25 @@
+.tags {
+  .title {
+    padding: @navbar-height 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .row {
+    margin-bottom: @card-height / 2 + 1rem;
+  }
+
+  .col-12 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .col-12 {
+    &:not(:last-child) {
+      margin-bottom: @card-height / 2 + 1rem;
+    }
+  }
+}

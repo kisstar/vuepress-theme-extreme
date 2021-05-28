@@ -15,18 +15,35 @@ import GlobalLayout from '@app/components/GlobalLayout.vue';
 import Navbar from '@theme/components/Navbar.vue';
 import Footer from '@theme/components/Footer.vue';
 
+const pageClassMap = {
+  '/': 'home',
+  '/tag/': 'tags',
+};
+
 export default {
   name: 'GlobalLayout',
   components: { DefaultGlobalLayout: GlobalLayout, Navbar, Footer },
   computed: {
     pageClass() {
-      let className = 'home';
+      const { path } = this.$page;
 
-      if (this.$pagination && this.$pagination.paginationIndex > 0) {
-        className = 'page';
+      if (!path) {
+        return 'not-found';
       }
 
-      return className;
+      if (pageClassMap[path]) {
+        return pageClassMap[path];
+      }
+
+      if (/\/tag\/\w+/.test(path)) {
+        return 'tag';
+      }
+
+      if (/\/page\/\d+/.test(path)) {
+        return 'page';
+      }
+
+      return 'post';
     },
   },
 };

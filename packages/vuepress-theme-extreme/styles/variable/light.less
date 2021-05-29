@@ -27,6 +27,7 @@
 @white: hsl(0, 0%, 100%);
 @less-white: hsl(0deg 0% 97%);
 
+@less-transparent: rgba(0, 0, 0, 0.02);
 @half-transparent: hsla(0, 0%, 0%, 0.5);
 @transparent: hsla(0, 0%, 0%, 0);
 
@@ -35,11 +36,11 @@ body {
   --text-muted: @gray-600;
 
   // scrollbar
-  --scrollbar-track: @gray-300;
-  --scrollbar-thumb: @gray-600;
+  --scrollbar-track: @dark-500;
+  --scrollbar-thumb: @white;
 
   // navbar
-  --nav-bg: @gray-900;
+  --nav-bg: @dark;
   --nav-color: @gray-300;
   --nav-active-color: @secondary;
   --nav-bd: @gray-100;
@@ -66,6 +67,10 @@ body {
   // card
   --card-title-bg: @dark-100;
   --card-content-bg: @less-white;
+
+  // code
+  --code-line-color: @dark-500;
+  --code-line-bg: @less-transparent;
 }
 
 @text-muted: var(--text-muted);
@@ -100,6 +105,14 @@ body {
 @card-title-bg: var(--card-title-bg);
 @card-content-bg: var(--card-content-bg);
 @card-content-color: @text-muted;
+
+@anchor-color: var(--nav-active-color);
+
+@code-lang-color: @half-transparent;
+@code-line-color: var(--code-line-color);
+@code-line-bg: var(--code-line-bg);
+
+@article-over-tip-color: @text-muted;
 
 // footer
 @footer-bg: var(--nav-bg);

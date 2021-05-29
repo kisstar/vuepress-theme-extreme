@@ -1,0 +1,182 @@
+// @import '~prismjs/themes/prism-tomorrow.css';
+// @import '~prismjs/themes/prism-okaidia.css';
+@import '~prismjs/themes/prism.css';
+
+@lineNumbersWrapperWidth: 2em;
+@lineHeight: 1.5rem;
+
+.line-numbers-mode {
+  pre {
+    padding-left: @lineNumbersWrapperWidth + 0.5em;
+    line-height: @lineHeight;
+  }
+
+  // 代码行号
+  .line-numbers-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 1em 0;
+    width: @lineNumbersWrapperWidth;
+    text-align: center;
+
+    br {
+      user-select: none;
+    }
+
+    .line-number {
+      position: relative;
+      font-size: 0.85em;
+      line-height: @lineHeight;
+      user-select: none;
+    }
+  }
+}
+
+// 代码右上角的语言提示
+div[class~='language-javascript'],
+div[class~='language-js'] {
+  &:before {
+    content: 'js';
+  }
+}
+
+div[class~='language-typescript'],
+div[class~='language-ts'] {
+  &:before {
+    content: 'ts';
+  }
+}
+
+div[class~='language-markup'],
+div[class~='language-html'] {
+  &:before {
+    content: 'html';
+  }
+}
+
+div[class~='language-markdown'],
+div[class~='language-md'] {
+  &:before {
+    content: 'md';
+  }
+}
+
+div[class~='language-vue'] {
+  &:before {
+    content: 'vue';
+  }
+}
+
+div[class~='language-css'] {
+  &:before {
+    content: 'css';
+  }
+}
+
+div[class~='language-sass'] {
+  &:before {
+    content: 'sass';
+  }
+}
+
+div[class~='language-scss'] {
+  &:before {
+    content: 'scss';
+  }
+}
+
+div[class~='language-less'] {
+  &:before {
+    content: 'less';
+  }
+}
+
+div[class~='language-stylus'] {
+  &:before {
+    content: 'stylus';
+  }
+}
+
+div[class~='language-go'] {
+  &:before {
+    content: 'go';
+  }
+}
+
+div[class~='language-java'] {
+  &:before {
+    content: 'java';
+  }
+}
+
+div[class~='language-c'] {
+  &:before {
+    content: 'c';
+  }
+}
+
+div[class~='language-bash'],
+div[class~='language-sh'] {
+  &:before {
+    content: 'sh';
+  }
+}
+
+div[class~='language-yaml'] {
+  &:before {
+    content: 'yaml';
+  }
+}
+
+div[class~='language-python'],
+div[class~='language-py'] {
+  &:before {
+    content: 'py';
+  }
+}
+
+div[class~='language-docker'] {
+  &:before {
+    content: 'docker';
+  }
+}
+
+div[class~='language-dockerfile'] {
+  &:before {
+    content: 'dockerfile';
+  }
+}
+
+div[class~='language-makefile'] {
+  &:before {
+    content: 'makefile';
+  }
+}
+
+div[class~='language-json'] {
+  &:before {
+    content: 'json';
+  }
+}
+div[class~='language-ruby'] {
+  &:before {
+    content: 'rb';
+  }
+}
+div[class~='language-php'] {
+  &:before {
+    content: 'php';
+  }
+}
+
+div[class*='language-'] {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0.8em;
+    right: 1em;
+    font-size: 0.75rem;
+  }
+}

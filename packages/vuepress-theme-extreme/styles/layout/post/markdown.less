@@ -1,0 +1,32 @@
+@import '~github-markdown-css/github-markdown.css';
+
+.markdown-body {
+  .article-list-container-size-x();
+  margin: auto; // 水平居中
+
+  h1 {
+    margin: 2rem 0 3rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:focus .header-anchor,
+    &:hover .header-anchor {
+      opacity: 1;
+    }
+  }
+
+  a.header-anchor {
+    margin-left: -0.8em;
+    opacity: 0;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

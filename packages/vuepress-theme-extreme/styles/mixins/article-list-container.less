@@ -1,9 +1,17 @@
-.article-list-container-size() {
-  margin: 4rem auto;
+.article-list-container-size-x {
   padding-right: 5vw;
   padding-left: 5vw;
   width: 100%;
   max-width: calc(750px + 10vw);
+}
+
+.article-list-container-size-y() {
+  margin: 4rem auto;
+}
+
+.article-list-container-size() {
+  .article-list-container-size-x();
+  .article-list-container-size-y();
 }
 
 .article-list-container {

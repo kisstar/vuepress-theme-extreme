@@ -1,6 +1,7 @@
 <template>
-  <article class="theme-content-container">
-    <Content class="theme-content" />
+  <article class="markdown-body">
+    <Content />
+    <div class="over-tip">到底了，再怎么滑也没有了 ^_^</div>
   </article>
 </template>
 

@@ -1,0 +1,21 @@
+.markdown-body {
+  .header-anchor {
+    color: @anchor-color;
+  }
+}
+
+div[class*='language-'] {
+  position: relative;
+
+  &::before {
+    color: @code-lang-color;
+  }
+}
+
+.line-numbers-mode {
+  // 代码行号
+  .line-numbers-wrapper {
+    color: @code-line-color;
+    background-color: @code-line-bg;
+  }
+}

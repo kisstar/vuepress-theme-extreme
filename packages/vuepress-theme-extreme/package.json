@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-blog": "^1.9.4",
+    "github-markdown-css": "^4.0.0",
     "reset-css": "^5.0.1"
   },
   "devDependencies": {

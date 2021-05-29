@@ -1,4 +1,6 @@
-import { sharedPropertyDefinition, isFunction, isArray, error } from '@theme/lib/util';
+import isFunction from 'lodash/isFunction';
+import isArray from 'lodash/isArray';
+import { sharedPropertyDefinition, error } from '@theme/lib/util';
 
 const typesMap = {
   any: null,

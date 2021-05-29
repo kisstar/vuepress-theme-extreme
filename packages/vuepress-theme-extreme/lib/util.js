@@ -1,7 +1,8 @@
-const { prototype: objProto } = Object;
-const { toString } = objProto;
-
 export const isDev = process.env.NODE_ENV !== 'production';
+
+export const endingSlashRE = /\/$/;
+
+export const outboundRE = /^[a-z]+:/i;
 
 export const noop = () => {};
 
@@ -22,9 +23,5 @@ export function isEmptyElement(c) {
 export function filterEmpty(children = []) {
   return children.filter(c => !isEmptyElement(c));
 }
-
-export const isFunction = value => toString.call(value) === '[object Function]';
-
-export const isArray = value => toString.call(value) === '[object Array]';
 
 export default {};

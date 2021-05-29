@@ -5,7 +5,7 @@
 
 const { resolve } = require('path');
 
-const { getBlogPluginOptions } = require('./node/options');
+const { getBlogPluginOptions, getLastUpdatedOptions } = require('./node/options');
 
 /**
  * @param {Object} themeConf 用户对主题的配置，由当前主题处理实现
@@ -21,8 +21,10 @@ module.exports = (themeConf, ctx) => {
     ...themeConf,
   };
   const blogPluginOptions = getBlogPluginOptions(themeConfig);
+  const lastUpdatedOptions = getLastUpdatedOptions();
 
   plugins.push(['@vuepress/blog', blogPluginOptions]);
+  plugins.push(['@vuepress/last-updated', lastUpdatedOptions]);
 
   // 获取处理后的配置
   Object.assign(config, {

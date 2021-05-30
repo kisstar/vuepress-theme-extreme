@@ -1,10 +1,46 @@
-.page-edit {
+@icon-m: 0.2rem;
+@divider-p: 1rem;
+
+.page-edit,
+.page-nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 2rem;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.page-edit {
+  padding-top: 3rem;
+  padding-bottom: @divider-p;
+}
+
+.page-nav {
+  padding-top: @divider-p;
+
+  .prev,
+  .next {
+    display: flex;
+    align-items: center;
+  }
+
+  .prev {
+    svg {
+      margin-right: @icon-m;
+    }
+  }
+
+  .next {
+    svg {
+      margin-left: @icon-m;
+    }
+  }
 }
 
 .over-tip {
-  padding: 2rem 0;
+  padding: 3rem 0;
   text-align: center;
 }

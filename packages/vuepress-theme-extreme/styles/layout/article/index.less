@@ -1,6 +1,72 @@
 @icon-m: 0.2rem;
 @divider-p: 1rem;
 
+// 头部博文信息
+.post-meta {
+  margin-bottom: 3rem;
+
+  .post-meta-author,
+  .post-meta-date {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .post-meta-author {
+    margin-right: 1.5rem;
+  }
+
+  .post-meta-tags {
+    display: flex;
+    margin-top: 0.5rem;
+    padding: 0;
+
+    .post-tag {
+      margin: 0;
+      margin-right: 0.5rem;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 0 1.5rem;
+      height: 1.5rem;
+      border-radius: 3px 0 0 3px;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &::before {
+        position: absolute;
+        left: 0.6rem;
+        top: 0.6rem;
+        border-radius: 50%;
+        height: 0.4rem;
+        width: 0.4rem;
+        content: '';
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-top: 0.7rem solid;
+        border-left: 0.6rem solid;
+        border-bottom: 0.8rem solid;
+        content: '';
+      }
+    }
+  }
+
+  .icon {
+    margin-right: @icon-m;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// 编辑和导航
 .page-edit,
 .page-nav {
   display: flex;
@@ -40,6 +106,7 @@
   }
 }
 
+// 底部提示
 .over-tip {
   padding: 3rem 0;
   text-align: center;

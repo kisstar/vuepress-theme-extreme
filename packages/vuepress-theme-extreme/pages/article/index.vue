@@ -1,5 +1,6 @@
 <template>
   <article class="markdown-body">
+    <Meta v-if="$frontmatter.title" />
     <Content />
     <Edit />
     <Divider />
@@ -12,9 +13,10 @@
 import Divider from '@theme/components/Divider.vue';
 import Edit from './Edit.vue';
 import Nav from './Nav.vue';
+import Meta from './Meta.vue';
 
 export default {
   name: 'Article',
-  components: { Edit, Divider, Nav },
+  components: { Meta, Edit, Divider, Nav },
 };
 </script>

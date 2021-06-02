@@ -1,3 +1,28 @@
+.post-meta-author,
+.post-meta-date {
+  color: @article-meta-color;
+}
+
+.post-meta {
+  .post-meta-tags {
+    a {
+      background-color: @article-meta-tag-bg;
+      color: @article-meta-tag-color;
+
+      &::before {
+        background: @white;
+      }
+
+      &::after {
+        background: @white;
+        border-bottom-color: @transparent;
+        border-left-color: @article-meta-tag-bg;
+        border-top-color: @transparent;
+      }
+    }
+  }
+}
+
 .page-edit {
   .time {
     color: @article-edit-time-color;

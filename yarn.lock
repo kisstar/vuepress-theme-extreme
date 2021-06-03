@@ -1918,6 +1918,14 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
+"@vssue/api-gitee-v5@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.npm.taobao.org/@vssue/api-gitee-v5/download/@vssue/api-gitee-v5-1.4.7.tgz#2bb0be18ef131fea109156c6792c16bea22dd4c9"
+  integrity sha1-K7C+GO8TH+oQkVbGeSwWvqIt1Mk=
+  dependencies:
+    "@vssue/utils" "^1.4.7"
+    axios "^0.21.1"
+
 "@vssue/api-github-v3@^1.1.2":
   version "1.4.7"
   resolved "https://registry.nlark.com/@vssue/api-github-v3/download/@vssue/api-github-v3-1.4.7.tgz#7e30304111ac34b5785abe2f99be8dcc04e94cdf"

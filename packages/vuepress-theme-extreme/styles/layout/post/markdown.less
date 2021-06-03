@@ -20,13 +20,15 @@
     }
   }
 
-  a.header-anchor {
-    margin-left: -0.8em;
-    opacity: 0;
-
+  a {
     &:focus,
     &:hover {
-      text-decoration: none;
+      text-decoration: none !important;
+    }
+
+    &.header-anchor {
+      margin-left: -0.8em;
+      opacity: 0;
     }
   }
 }

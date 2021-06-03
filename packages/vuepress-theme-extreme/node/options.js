@@ -33,7 +33,7 @@ exports.getBlogPluginOptions = function getBlogPluginOptions(themeConfig) {
   ['directories', 'frontmatters'].forEach(prop => {
     blogPluginOptions[prop] = themeConfig[prop] || defaultBlogPluginOptions[prop];
   });
-  ['globalPagination'].forEach(prop => {
+  ['globalPagination', 'comment'].forEach(prop => {
     blogPluginOptions[prop] = { ...defaultBlogPluginOptions[prop], ...themeConfig[prop] };
   });
   blogPluginOptions.directories.forEach(item => {

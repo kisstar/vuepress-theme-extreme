@@ -63,7 +63,7 @@ export default {
   },
   computed: {
     pages() {
-      return this.$pagination.pages.map(page => {
+      return (this.$pagination ? this.$pagination.pages : []).map(page => {
         const {
           key,
           frontmatter: { thumbnail, summary, author, date, tags = [] },

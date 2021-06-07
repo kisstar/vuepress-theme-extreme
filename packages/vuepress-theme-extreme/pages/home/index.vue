@@ -2,7 +2,7 @@
   <section>
     <Banner :bgImage="$withBase($themeConfig.banner || banner)" />
     <RecentUpdate />
-    <div v-if="$pagination.length > 1" class="see-more">
+    <div v-if="$pagination && $pagination.length > 1" class="see-more">
       <Link :item="link" />
     </div>
   </section>

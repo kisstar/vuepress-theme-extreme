@@ -12,7 +12,7 @@ export default {
   components: { Home, Pagination },
   computed: {
     isPagination() {
-      return this.$pagination.paginationIndex > 0;
+      return this.$pagination && this.$pagination.paginationIndex > 0;
     },
   },
 };

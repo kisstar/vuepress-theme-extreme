@@ -1,5 +1,5 @@
 @primary: hsl(206, 92%, 46%);
-@secondary: hsl(210, 100%, 73%);
+@secondary: hsl(210deg, 100%, 73%);
 
 @warning: hsl(39, 97%, 71%);
 @error: hsl(360, 67%, 51%);
@@ -40,8 +40,8 @@ body {
   --scrollbar-thumb: @white;
 
   // navbar
-  --nav-bg: @dark;
-  --nav-color: @gray-300;
+  --nav-bg: @white;
+  --nav-color: @gray-900;
   --nav-active-color: @secondary;
   --nav-bd: @gray-100;
   --nav-dp-divide: @dark;
@@ -49,7 +49,7 @@ body {
   // banner
   --banner-search-bg: @half-transparent;
   --banner-input-bg: @white;
-  --banner-button-bg: @primary;
+  --banner-button-bg: @secondary;
   --banner-button-color: @white;
 
   // timeline
@@ -74,6 +74,7 @@ body {
 
   // article
   --article-meta-tag-bg: @dark-300;
+  --article-content-bd: @dark-300;
 }
 
 @text-muted: var(--text-muted);
@@ -117,10 +118,15 @@ body {
 
 @article-edit-time-color: @text-muted;
 @article-over-tip-color: @text-muted;
-@article-jump-btn-color: @text-muted;
+@article-jump-btn-color: @text-muted; // 上一篇和下一篇的按钮字体
 @article-meta-color: @text-muted;
 @article-meta-tag-bg: var(--article-meta-tag-bg);
 @article-meta-tag-color: @text-muted;
+@article-content-color: var(--nav-active-color);
+@article-content-h2-bd: var(--article-content-bd);
+@article-content-code-bg: var(--article-content-bd);
+
+@comment-link-color: var(--nav-active-color);
 
 // footer
-@footer-bg: var(--nav-bg);
+@footer-bg: var(--card-title-bg);

@@ -1,5 +1,5 @@
 <template>
-  <article class="markdown-body">
+  <article class="post-body">
     <Meta v-if="$frontmatter.title" />
     <Content />
     <Edit />

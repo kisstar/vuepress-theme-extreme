@@ -1,6 +1,16 @@
-.markdown-body {
-  .header-anchor {
-    color: @anchor-color;
+.post-body {
+  h2 {
+    border-bottom-color: @article-content-h2-bd;
+  }
+
+  code {
+    background-color: @article-content-code-bg;
+  }
+
+  pre {
+    & > code {
+      background: @transparent;
+    }
   }
 }
 
@@ -17,5 +27,17 @@ div[class*='language-'] {
   .line-numbers-wrapper {
     color: @code-line-color;
     background-color: @code-line-bg;
+  }
+}
+
+// 评论区域
+.markdown-body {
+  a {
+    color: @comment-link-color !important;
+
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+    }
   }
 }

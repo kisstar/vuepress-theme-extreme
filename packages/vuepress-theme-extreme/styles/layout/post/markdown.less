@@ -1,12 +1,6 @@
-@import '~github-markdown-css/github-markdown.css';
-
-.markdown-body {
+.post-body {
   .article-list-container-size-x();
   margin: auto; // 水平居中
-
-  h1 {
-    margin: 3rem 0 1rem;
-  }
 
   h1,
   h2,
@@ -14,21 +8,84 @@
   h4,
   h5,
   h6 {
+    margin: 2rem 0 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+
+    .header-anchor {
+      opacity: 0;
+    }
+
     &:focus .header-anchor,
     &:hover .header-anchor {
       opacity: 1;
     }
   }
 
-  a {
-    &:focus,
-    &:hover {
-      text-decoration: none !important;
-    }
+  h1 {
+    margin: 3rem 0 1rem;
+    font-size: 2.2rem;
+  }
 
+  h2 {
+    padding-bottom: 0.3rem;
+    font-size: 1.65rem;
+    border-bottom: 1px solid;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  p,
+  ul {
+    line-height: 1.7;
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+  }
+
+  ul {
+    margin-bottom: 0.8rem;
+    padding-left: 2em;
+    list-style-type: disc;
+
+    ul {
+      margin-bottom: 0;
+      list-style-type: circle;
+
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
+
+  a {
     &.header-anchor {
       margin-left: -0.8em;
       opacity: 0;
     }
+  }
+
+  code {
+    margin: 0;
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+
+    border-radius: 3px;
+  }
+
+  pre {
+    & > code {
+      font-size: 100%;
+      padding: 0;
+      white-space: pre;
+      word-break: normal;
+    }
+  }
+
+  img {
+    max-width: 100%;
   }
 }

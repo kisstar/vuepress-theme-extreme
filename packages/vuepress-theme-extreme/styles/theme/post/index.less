@@ -7,10 +7,24 @@
     background-color: @article-content-code-bg;
   }
 
+  // 代码块中的 code 标签
   pre {
     & > code {
       background: @transparent;
     }
+  }
+
+  tr {
+    border-top-color: @article-table-bd;
+  }
+
+  tr:nth-child(2n) {
+    background-color: @article-table-bg;
+  }
+
+  th,
+  td {
+    border-color: @article-table-bd;
   }
 }
 

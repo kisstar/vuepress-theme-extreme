@@ -66,7 +66,7 @@ export default {
       return this.$frontmatter.date;
     },
     resolvedDate() {
-      return transformer(this.date);
+      return transformer(this.date).replace(/\s+.*/, '');
     },
     resolvedTags() {
       const { tags } = this.$frontmatter;

@@ -3,6 +3,11 @@
 @banner-height: 26rem;
 @input-height: 4.25rem;
 
+.input-width() {
+  width: 80%;
+  max-width: 31.25rem;
+}
+
 .home {
   .banner {
     position: relative;
@@ -35,10 +40,22 @@
       padding: 0 1rem;
       transform: translate(-50%, 50%);
 
+      // @vuepress/search 插件中的类
+      .search-box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .suggestions {
+          top: @input-height + 0.25rem;
+          .input-width();
+          min-height: 15rem;
+        }
+      }
+
       input {
         display: block;
-        width: 80%;
-        max-width: 31.25rem;
+        .input-width();
         height: @input-height;
         padding: 0.625rem 2rem;
         font-size: 20px;

@@ -22,6 +22,7 @@
             "alias": {
               "@app": "@vuepress/core/lib/client",
               "@theme": "vuepress-theme-extreme",
+              "@SearchBox": "@vuepress/plugin-search"
             }
           }
         }

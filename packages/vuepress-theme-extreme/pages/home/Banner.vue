@@ -7,17 +7,22 @@
       </h3>
     </div>
     <div class="search-wrapper">
-      <input type="text" placeholder="What are you looking for?" />
-      <button>Search</button>
+      <SearchBox />
+      <!-- <input type="text" placeholder="What are you looking for?" /> -->
+      <!-- <button>Search</button> -->
     </div>
   </div>
 </template>
 
 <script>
 import VueTypes from '../../lib/vue-types';
+import SearchBox from '@SearchBox';
 
 export default {
   name: 'Banner',
+  components: {
+    SearchBox,
+  },
   props: {
     bgImage: VueTypes.string,
   },

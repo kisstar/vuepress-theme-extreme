@@ -25,6 +25,7 @@ module.exports = (themeConf, ctx) => {
 
   plugins.push(['@vuepress/blog', blogPluginOptions]);
   plugins.push(['@vuepress/last-updated', lastUpdatedOptions]);
+  plugins.push('@vuepress/search');
 
   // 获取处理后的配置
   Object.assign(config, {

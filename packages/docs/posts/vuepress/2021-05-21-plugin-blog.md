@@ -1,15 +1,20 @@
 ---
+thumbnail: /images/blog-plugin.png
+title: VuePress Blog Plugin
+summary: VuePress 是基于 Vue.js 推出的一个可扩展的静态站点生成器，创建它是为了支持 Vue 自己的子项目的文档需求。后来，VuePress 1.x 引入了插件系统，极大地提高了 VuePress 的可扩展性。@vuepress/plugin-blog 就是 VuePress 1.x 的作者创建的一个 VuePress 插件，其目的是降低开发 VuePress 博客主题 AFAP 的成本。
+author: Kisstar
+location: 北京
+date: 2021-05-21
 tags:
   - VuePress
+  - Vue
 ---
 
-# @vuepress/plugin-blog
+<img :src="$withBase('/images/blog-plugin.png')" />
 
 VuePress 是基于 Vue.js 推出的一个可扩展的静态站点生成器，创建它是为了支持 Vue 自己的子项目的文档需求。
 
 后来，VuePress 1.x 引入了插件系统，极大地提高了 VuePress 的可扩展性。@vuepress/plugin-blog 就是 VuePress 1.x 的作者创建的一个 VuePress 插件，其目的是降低开发 VuePress 博客主题 AFAP 的成本。
-
-<!-- more -->
 
 ## Directory Classifier
 

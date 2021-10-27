@@ -1,6 +1,10 @@
 <template>
   <section>
-    <Banner :bgImage="$withBase($themeConfig.banner || banner)" />
+    <Banner
+      :bgImage="$withBase($themeConfig.banner || banner)"
+      :knownTitle="$themeConfig.knownTitle"
+      :subTitle="$themeConfig.subTitle"
+    />
     <RecentUpdate />
     <div v-if="$pagination && $pagination.length > 1" class="see-more">
       <Link :item="link" />
@@ -10,7 +14,6 @@
 
 <script>
 import Link from '@theme/components/Link.vue';
-import banner from '@theme/assets/images/banner.jpg';
 import Banner from './Banner.vue';
 import RecentUpdate from './RecentUpdate.vue';
 
@@ -19,7 +22,7 @@ export default {
   components: { Banner, RecentUpdate, Link },
   data() {
     return {
-      banner,
+      banner: 'https://img.paulzzh.tech/touhou/random',
     };
   },
   computed: {

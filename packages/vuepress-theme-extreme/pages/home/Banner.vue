@@ -1,9 +1,9 @@
 <template>
   <div class="banner" :style="{ backgroundImage: `url(${bgImage})` }">
     <div class="title-wrapper">
-      <h1 class="title">Kisstar</h1>
+      <h1 class="title">{{ knownTitle }}</h1>
       <h3 class="sub-title">
-        If you can't explain it simply, you don't understand it well enough.
+        {{ subTitle }}
       </h3>
     </div>
     <div class="search-wrapper">
@@ -25,6 +25,8 @@ export default {
   },
   props: {
     bgImage: VueTypes.string,
+    knownTitle: VueTypes.string,
+    subTitle: VueTypes.string,
   },
 };
 </script>

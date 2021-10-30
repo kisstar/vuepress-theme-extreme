@@ -43,7 +43,12 @@
             ></path>
             <line x1="7" y1="7" x2="7" y2="7"></line>
           </svg>
-          <Link v-for="oItem in item.tags" :key="oItem.text" :item="oItem" />
+          <template v-for="(oItem, index) in item.tags">
+            <Link :key="oItem.text" :item="oItem" />
+            <span class="split-line" v-if="index + 1 !== item.tags.length" :key="oItem.text">
+              /
+            </span>
+          </template>
         </p>
       </div>
     </li>

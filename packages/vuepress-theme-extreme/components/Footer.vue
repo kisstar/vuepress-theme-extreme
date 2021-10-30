@@ -2,13 +2,14 @@
   <footer class="footer">
     <div class="copyright-container">
       <p>
-        Theme developed by
+        <Link :item="linkInfo.theme" />
+        developed by
         <Link :item="linkInfo.kisstar" />
         & Powered by
         <Link :item="linkInfo.vuepress" />
         .
       </p>
-      <p>Copyright © 2020. All Rights Reserved.</p>
+      <p>Copyright © {{ year }}. All Rights Reserved.</p>
     </div>
   </footer>
 </template>
@@ -17,6 +18,12 @@
 import Link from '@theme/components/Link.vue';
 
 const linkInfo = Object.freeze({
+  theme: {
+    text: 'vuepress-theme-extreme',
+    link: 'https://github.com/kisstar/vuepress-theme-extreme',
+    rel: 'noopener noreferrer',
+    target: '_blank',
+  },
   kisstar: {
     text: 'Kisstar',
     link: 'https://github.com/kisstar/',
@@ -39,6 +46,7 @@ export default {
   data() {
     return {
       linkInfo,
+      year: new Date().getFullYear(),
     };
   },
 };

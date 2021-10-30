@@ -25,7 +25,7 @@
 @dark: hsl(0, 11%, 2%);
 
 @white: hsl(0, 0%, 100%);
-@less-white: hsl(0deg 0% 97%);
+@less-white: hsl(0deg, 0%, 97%);
 
 @less-transparent: rgba(0, 0, 0, 0.02);
 @half-transparent: hsla(0, 0%, 0%, 0.5);
@@ -51,6 +51,9 @@ body {
   --banner-input-bg: @white;
   --banner-button-bg: @secondary;
   --banner-button-color: @white;
+
+  // latest
+  --tag-split-line-color: @dark-400;
 
   // timeline
   --timeline-line-bd: @secondary;
@@ -100,6 +103,7 @@ body {
 @timeline-img-bd: var(--timeline-img-bd);
 
 @latest-time-color: @text-muted;
+@latest-split-line-color: var(--tag-split-line-color);
 
 @pagination-toggle-color: var(--pagination-toggle-color);
 @pagination-toggle-bg: var(--pagination-toggle-bg);
@@ -131,6 +135,7 @@ body {
 @article-table-bd: var(--nav-bd);
 @article-table-bg: var(--article-content-bd);
 
+// comment
 @comment-link-color: var(--nav-active-color);
 
 // footer

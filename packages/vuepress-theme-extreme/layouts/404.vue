@@ -1,6 +1,29 @@
 <template>
-  <div class="not-found">
-    <h1>404</h1>
-    <blockquote>您找的页面已经跑到火星上面了，再看看别的吧。</blockquote>
+  <div class="not-found" :style="{ 'background-image': `url(${degaultNotFount})` }">
+    <p class="found-text">
+      您找的页面已经跑到火星上面了，再
+      <Link :item="link" />
+      别的吧。
+    </p>
   </div>
 </template>
+
+<script>
+import Link from '@theme/components/Link.vue';
+import degaultNotFount from '@theme/assets/images/404.png';
+
+export default {
+  components: {
+    Link,
+  },
+  data() {
+    return {
+      degaultNotFount,
+      link: {
+        text: '看看',
+        link: '/',
+      },
+    };
+  },
+};
+</script>

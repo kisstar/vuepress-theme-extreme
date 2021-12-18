@@ -1,5 +1,5 @@
 {
-  "name": "vuepress-theme-extreme",
+  "name": "@kisstar/vuepress-theme-extreme",
   "version": "0.0.0",
   "description": "The VuePress theme for blog",
   "main": "index.js",

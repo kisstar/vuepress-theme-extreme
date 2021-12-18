@@ -2,9 +2,13 @@
 
 The VuePress theme for blog.
 
-## usage
+## Install
 
-主题的使用和插件的使用方式几乎一致，你可以这样使用它：
+```bash
+npm i @kisstar/vuepress-theme-extreme
+```
+
+## Usage
 
 ```js
 // .vuepress/config.js
@@ -12,3 +16,7 @@ module.exports = {
   theme: 'vuepress-theme-xx',
 };
 ```
+
+## LICENSE
+
+MIT

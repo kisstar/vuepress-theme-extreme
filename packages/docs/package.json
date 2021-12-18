@@ -26,6 +26,6 @@
     "vuepress": "^1.4.0"
   },
   "dependencies": {
-    "vuepress-theme-extreme": "^0.0.0"
+    "@kisstar/vuepress-theme-extreme": "^0.0.0"
   }
 }

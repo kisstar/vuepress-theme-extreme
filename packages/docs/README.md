@@ -1,3 +1,3 @@
 # docs
 
-A blog with vuepress theme
+A blog with vuepress theme.

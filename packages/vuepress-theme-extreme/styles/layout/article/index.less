@@ -30,8 +30,9 @@
     a {
       position: relative;
       display: inline-block;
-      padding: 0 1.5rem;
       height: 1.5rem;
+      padding: 0 1.5rem;
+      line-height: 1.5rem;
       border-radius: 3px 0 0 3px;
 
       &:hover {
@@ -40,30 +41,30 @@
 
       &::before {
         position: absolute;
-        left: 0.6rem;
         top: 0.6rem;
-        border-radius: 50%;
-        height: 0.4rem;
+        left: 0.6rem;
         width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
         content: '';
       }
 
       &::after {
         position: absolute;
-        right: 0;
         top: 0;
+        right: 0;
         border-top: 0.7rem solid;
-        border-left: 0.6rem solid;
         border-bottom: 0.8rem solid;
+        border-left: 0.6rem solid;
         content: '';
       }
     }
   }
 
   .icon {
-    margin-right: @icon-m;
     width: 14px;
     height: 14px;
+    margin-right: @icon-m;
   }
 }
 

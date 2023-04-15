@@ -1,6 +1,7 @@
-module.exports = ctx => ({
-  theme: 'vuepress-theme-extreme',
+module.exports = ({ isProd }) => ({
+  theme: '@kisstar/vuepress-theme-extreme',
   title: "Kisstar's 博客",
+  base: isProd ? 'https://kisstar.github.io/vuepress-theme-extreme/' : '',
   locales: {
     '/': {
       lang: 'zh-CN',
@@ -8,6 +9,9 @@ module.exports = ctx => ({
   },
   // 主题配置
   themeConfig: {
+    banner: 'banner.jpg',
+    knownTitle: 'vuepress-theme-extreme',
+    subTitle: 'Either black or white, a brief and extreme VuePress theme.',
     // 导航栏的配置
     nav: [
       {

@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "yarn workspace docs dev",
     "build": "yarn workspace docs build",
+    "deploy": "yarn workspace docs deploy",
     "pkgs:run": "lerna run --scope",
     "pkgs:add": "lerna add --scope",
     "pkgs:changed": "lerna changed",

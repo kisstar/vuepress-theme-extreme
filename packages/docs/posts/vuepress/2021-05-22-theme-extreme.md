@@ -12,16 +12,16 @@ tags:
 
 静态站点生成器 VuePress 提供了可扩展的主题功能，大家可以根据自己的喜好进行定制。在遵守相应规范前提下，创建一个主题就像开发一个普通的 Vue 应用一样。
 
-官方提供了通过简单配置就能直接使用的技术文档类主题，同时也提供了一些常见的插件，vupress-theme-extreme 就是建立在这些之上创建的一个博客主题。
+官方提供了通过简单配置就能直接使用的技术文档类主题，同时也提供了一些常见的插件，vupress-theme-extreme 就是建立在这些之上的一个博客主题。
 
 ## 如何使用
 
-当你使用本主题的时候，只需要将 theme 设置为 vupress-theme-extreme。
+当你使用本主题的时候，只需要将 theme 设置为 @kisstar/vuepress-theme-extreme 即可：
 
 ```js
 // .vuepress/config.js
 module.exports = {
-  theme: 'vuepress-theme-extreme',
+  theme: '@kisstar/vuepress-theme-extreme',
 };
 ```
 
@@ -242,7 +242,7 @@ module.exports = {
 
 ## 其它
 
-除了上面的配置说明外，你还可以参考线上的运行案例 <https://kisstar.xyz/>，欢迎 Star 或提交 ISSUE。
+除了上面的配置说明外，你还可以参考线上的运行案例 <https://kisstar.github.io/>，欢迎 Star 或提交 ISSUE。
 
 ## 参考
 

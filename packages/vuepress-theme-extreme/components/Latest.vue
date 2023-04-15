@@ -45,7 +45,7 @@
           </svg>
           <template v-for="(oItem, index) in item.tags">
             <Link :key="oItem.text" :item="oItem" />
-            <span class="split-line" v-if="index + 1 !== item.tags.length" :key="oItem.text">
+            <span class="split-line" v-if="index + 1 !== item.tags.length" :key="index">
               /
             </span>
           </template>

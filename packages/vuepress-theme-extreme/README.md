@@ -13,7 +13,7 @@ npm i @kisstar/vuepress-theme-extreme
 ```js
 // .vuepress/config.js
 module.exports = {
-  theme: 'vuepress-theme-xx',
+  theme: '@kisstar/vuepress-theme-extreme'
 };
 ```
 

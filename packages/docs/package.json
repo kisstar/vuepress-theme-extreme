@@ -6,14 +6,10 @@
   "scripts": {
     "dev": "vuepress dev posts --open --no-clear-screen",
     "build": "vuepress build posts",
-    "lint:md": "markdownlint ./posts/**/*.md"
+    "lint:md": "markdownlint ./posts/**/*.md",
+    "deploy": "gh-pages -d posts/.vuepress/dist -b gh-pages -r https://github.com/kisstar/vuepress-theme-extreme.git"
   },
-  "keywords": [
-    "theme",
-    "vuepress",
-    "blog",
-    "vuepress-theme-extreme"
-  ],
+  "keywords": ["theme", "vuepress", "blog", "vuepress-theme-extreme"],
   "repository": {
     "type": "git",
     "url": "git@github.com:kisstar/vuepress-theme-extreme.git"
@@ -21,11 +17,12 @@
   "author": "kisstar <dwh.chn@foxmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "markdownlint": "^0.23.1",
     "markdownlint-cli": "^0.27.0",
     "vuepress": "^1.4.0"
   },
   "dependencies": {
-    "@kisstar/vuepress-theme-extreme": "^0.0.0"
+    "@kisstar/vuepress-theme-extreme": "^0.0.2"
   }
 }

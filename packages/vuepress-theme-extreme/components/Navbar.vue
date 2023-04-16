@@ -1,9 +1,13 @@
 <template>
   <header class="navbar fixed">
-    <a :href="rootNav" class="navbar-brand">
-      <img class="logo" :src="$withBase($site.themeConfig.logo || logo)" :alt="$siteTitle" />
+    <RouterLink :to="$localePath" class="navbar-brand">
+      <img
+        class="logo"
+        :src="$site.themeConfig.logo ? $withBase($site.themeConfig.logo) : logo"
+        :alt="$siteTitle"
+      />
       <span v-if="$siteTitle">{{ $siteTitle }}</span>
-    </a>
+    </RouterLink>
     <button class="navbar-toggler" type="button" @click="toggleShow">
       <svg
         viewBox="0 0 1024 1024"
@@ -67,19 +71,6 @@ export default {
   computed: {
     userNav() {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
-    },
-    rootNav() {
-      let baseURL = this.$site.themeConfig.base || '';
-      let localePath = this.$localePath || '';
-
-      if (baseURL.slice(-1) === '/') {
-        baseURL = baseURL.slice(0, -1);
-      }
-      if (localePath[0] === '/') {
-        localePath = localePath.slice(1);
-      }
-
-      return `${baseURL}/${localePath}`;
     },
   },
 };

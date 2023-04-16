@@ -1,11 +1,9 @@
-const siteURL = 'https://kisstar.github.io/vuepress-theme-extreme/';
-
-module.exports = ({ isProd }) => {
-  const base = isProd ? siteURL : '';
+module.exports = () => {
+  const base = '/vuepress-theme-extreme/';
 
   return {
     theme: '@kisstar/vuepress-theme-extreme',
-    title: "Kisstar's 博客",
+    title: "Extreme Theme",
     base,
     locales: {
       '/': {
@@ -14,7 +12,6 @@ module.exports = ({ isProd }) => {
     },
     // 主题配置
     themeConfig: {
-      base,
       banner: 'banner.jpg',
       knownTitle: 'vuepress-theme-extreme',
       subTitle: 'Either black or white, a brief and extreme VuePress theme.',
@@ -72,10 +69,6 @@ module.exports = ({ isProd }) => {
           des:
             'VuePress 是一个基于 Vue 的轻量级静态网站生成器，以及为编写技术文档而优化的默认主题。',
         },
-      },
-      notFoundInfo: {
-        text: '看看',
-        link: siteURL,
       },
       // 获取在原文编辑地址
       editLinks: true,

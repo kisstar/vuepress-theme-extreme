@@ -2,7 +2,7 @@
   <div class="not-found" :style="{ 'background-image': `url(${degaultNotFount})` }">
     <p class="found-text">
       您找的页面已经跑到火星上面了，再
-      <Link :item="link" />
+      <Link :item="resultLink" />
       别的吧。
     </p>
   </div>
@@ -24,6 +24,15 @@ export default {
         link: '/',
       },
     };
+  },
+  computed: {
+    resultLink() {
+      if (this.$site.themeConfig.notFoundInfo) {
+        return this.$site.themeConfig.notFoundInfo;
+      }
+
+      return this.link;
+    },
   },
 };
 </script>

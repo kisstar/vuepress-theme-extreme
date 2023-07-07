@@ -64,7 +64,7 @@
     "markdownlint-cli": "^0.27.0",
     "prettier": "^1.19.1",
     "standard-version": "^8.0.1",
-    "stylelint": "^13.2.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-rational-order": "^0.1.2",
